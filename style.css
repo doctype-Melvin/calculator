@@ -1,0 +1,75 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+html {
+    box-sizing: border-box;
+}
+*, *::before, *:after {
+    box-sizing: inherit;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator {
+    display: grid;
+    grid-template-rows: repeat(5, 100px);
+    grid-template-columns: repeat(5, 100px);
+    background: rgb(245, 236, 236);
+    border: 8px solid rgb(63, 9, 126);
+    border-radius: 15px;
+}
+
+.display {
+    grid-column-start: span 5;
+    font-size: 3.75rem;
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: 5px;
+    background-color: rgb(197, 197, 197);
+    border-bottom: 1px solid black;
+    
+    
+}
+.span-two {
+    grid-column-start: span 2;
+}
+
+button {
+    font-size: 2rem;
+    border: rgb(192, 186, 186) 2px solid;
+    border-radius: 15px;
+    margin: 2px;
+}
+
+.delete, .clear {
+    background: orangered;
+    border-radius: 50%;
+}
+
+.delete:hover, .clear:hover {
+    background: rgb(207, 90, 48);
+}
+.delete:active, .clear:active {
+    background:rgb(122, 55, 31)
+}
+
+.operator {
+    background: slateblue;
+    color:rgb(192, 186, 186)
+}
+.operator:hover{
+    background: rgb(152, 141, 224);
+}
+.operator:active{
+    background: rgb(74, 66, 128)
+}
